@@ -31,8 +31,10 @@ class App extends React.Component {
 
       {/* Background Video */}
       <video autoplay muted loop style={{position: 'fixed',
-        width: '100%',
-        height: '100%',
+        minWidth: '100%',
+        minHeight: '100%',
+        width:'auto',
+        height: 'auto',
         top: '0',
         margin: 'auto'
       }}>
