@@ -9,6 +9,9 @@ class App extends React.Component {
       showMenu: false
     }
   }
+  componentDidMount(){
+    document.getElementById("bgVideo").play();
+  }
   showMenu(state){
     this.setState({
       showMenu: state
@@ -30,7 +33,7 @@ class App extends React.Component {
       }}/> */}
 
       {/* Background Video */}
-      <video autoplay muted loop style={{position: 'fixed',
+      <video id='bgVideo' autoplay muted loop style={{position: 'fixed',
         minWidth: '100%',
         minHeight: '100%',
         width:'auto',
@@ -38,7 +41,7 @@ class App extends React.Component {
         top: '0',
         margin: 'auto'
       }}>
-        <source src="https://drive.google.com/uc?export=download&id=15lftezf7arsPfN_8QlxCDrfgJuMUchrQ" type="video/mp4"/>
+        <source src="https://drive.google.com/uc?export=download&id=1-7vfQZNktP_k_pe0pt3wG7W1HY1v7Eka" type="video/mp4"/>
       </video>
 
       {/* Navbar */}
