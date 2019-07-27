@@ -24,6 +24,7 @@ body{
   margin: 0;
   padding: 0;
   background-color: #000;
+  /* background-image: url('https://images.pexels.com/photos/1402787/pexels-photo-1402787.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'); */
 }
 
 #header, #footer{
@@ -40,7 +41,7 @@ body{
 
 #header{
   top:0;
-  background-color: black;
+  background-color: transparent;
   padding: 10px;
 }
 #footer{
@@ -187,7 +188,7 @@ body{
 
 .page{
   min-height:100vh;
-  background-color:black;
+  background-color:transparent;
   display:block;
 }
 

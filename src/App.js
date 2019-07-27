@@ -17,10 +17,22 @@ class App extends React.Component {
   render(){
   return (
     <div>
+
+      {/* Background Image */}
+      {/* <div style={{
+        backgroundImage: 'url(https://images.pexels.com/photos/1402787/pexels-photo-1402787.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260)',position: 'fixed',
+        width: '100vw',
+        height: '100vh',
+        top: '0',
+        margin: 'auto',
+        backgroundRepeat:'no-repeat',
+        backgroundSize:'cover'
+      }}/> */}
+
       {/* Navbar */}
       <div id='header'>
         <img src={webcube_logo} height="60" width="150" style={{position: 'fixed',left:'10px',top:'10px'}}/>
-        <div onClick={()=>{this.showMenu(true)}} style={{position: 'fixed',right:'10px',backgroundColor: 'black',cursor:'pointer',width:'50px',height:'50px'}}>
+        <div onClick={()=>{this.showMenu(true)}} style={{position: 'fixed',right:'10px',backgroundColor: 'transparent',cursor:'pointer',width:'50px',height:'50px'}}>
           <div className="menu icon" style={{position: 'fixed',right:'10px',top:'28px',color: 'white',cursor:'pointer'}}></div>
         </div>
       </div>
@@ -69,7 +81,9 @@ class App extends React.Component {
             <div className='data'>
               <br/>
               <p>
-              We Cube is created for an Amazing service; we believe that multitalented people put together to work together can give the best services to our clients. Our work speaks louder than the words. We assure to make your vision a reality.
+              Wecube is a one stop shop for any business development.
+              Wecube is a very well equipped website which will please you with some unique features. It is also a
+              community which serves its clients with the best sources available.
               </p>
             </div>
 
@@ -92,7 +106,7 @@ class App extends React.Component {
               <div className='data'>
                 <br/>
                 <p>
-                To help the start-up companies, To maintain a good position in the market, To be a well known and reputable company.
+                  To help the start-up companies, maintain a good position in the market also to be a well known and reputable company.
                 </p>
               </div>
             </div>
@@ -107,50 +121,42 @@ class App extends React.Component {
 
           {/* Page 2 Section 1 */}
           <div className='services-data row'>
-            <div className='services-data-title col-md-3'>
-              <h6>CORPORATE STATIONARIES PRIMARY</h6>
-              <p>Business card, Letterhead, Envelopes, Mailing Label, Invoices, Word template letterhead, Email signature template</p>
-            </div>
-            
-            <div className='services-data-title col-md-3'>
-              <h6>CORPORATE STATIONARIES SECONDARY</h6>
-              <p>Continuation sheet, Packing Tapes, Badges for visitors, Employee ID Card, Fax sheet, PPT, Diary Cover, Post its, Planner, T-shirts, Memo pads
-              </p>
-            </div>
 
             <div className='col-md-3'>
-              <h6>UI/UX & DEVELOPMENT</h6>
-              <p>Web design, e-commerce website, App Design, E-Mailer, Development (Wordpress, Html ,css, java script, PHP, jQuery, MySQL )
-              </p>
+              <h6>BRANDING</h6>
+              <p>Logo design, Brand manual, Brand Guidelines</p>
             </div>
 
-            <div className='col-md-3 d-none d-sm-block'>
-              <h6>COLLATERALS</h6>
-              <p>brochure, poster, Flyers, Hoardings</p>
+            <div className='services-data-title col-md-3'>
+              <h6>PRINT AND MEDIA</h6>
+              <p>brochure, poster, Flyers, Hoardings </p>
             </div>
-          </div>
 
-          {/* Page 2 Section 2 */}
-          <div className='services-data row d-none d-md-flex' style={{marginTop:'20vim'}}>
             <div className='col-md-3'>
               <h6>DIGITAL MARKETING</h6>
               <p>SEO & SMM, Email / SMS</p>
             </div>
 
             <div className='col-md-3'>
-              <h6>MARKETING COLLATERAL</h6>
-              <p>Facebook, Instagram, Linked In, Twitter, Google, eCommerce listing, Newsletter</p>
+              <h6>MOTION</h6>
+              <p>Infographics, Motion Graphics, GIF’s, Advertisement shoots, Photo shoots, Product Shoots</p>
             </div>
+            
+          </div>
 
+          {/* Page 2 Section 2 */}
+          <div className='services-data row d-none d-md-flex' style={{marginTop:'20vim'}}>
+            <div className='col-md-3'>
+              <h6>UI/UX & DEVELOPMENT</h6>
+              <p>Web design, e-commerce website, App Design, E-Mailer, Development (Wordpress, Html ,css, java script, PHP, jQuery, MySQL )
+              </p>
+            </div>
+            
             <div className='col-md-3'>
               <h6>MAINTENANCE</h6>
               <p>Website Creating & Hosting, Web Security, Data Storage & Management, Data Backup & Malware Removal, Ssl Crft</p>
             </div>
 
-            <div className='col-md-3'>
-              <h6>MOTION</h6>
-              <p>Infographics, Motion Graphics, GIF’s</p>
-            </div>
           </div>
 
         </div>
@@ -165,7 +171,9 @@ class App extends React.Component {
               <br/>
                 Address<br/>
                 <div style={{color:'gray',marginTop:'10px'}}>
-                  #74/2A, Flat No.109, NR Residency, K.R.<br/> Garden, 1st Cross, 8th Block, Koramangala,<br/> Bangalore-560095
+                #30, Poojappa Layout, G.N.R Gardens,
+                <br/>
+                 Chellikere, Kalyan Nagar post,<br/> Bangalore - 560023
                 </div>
                 
                 <br/><br/>
@@ -177,12 +185,11 @@ class App extends React.Component {
                 
             </div>
             <div className='contact-map d-none d-md-flex'>
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9421.067291147843!2d77.62151498995459!3d12.938059102390216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1447b6576acb%3A0x5514c1bedc3c55df!2sNR+Residency!5e0!3m2!1sen!2sin!4v1564167038568!5m2!1sen!2sin" 
-                width="400" 
-                height="300" 
-                frameborder="0"
-              />
+            <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.0254844299398!2d77.6414411148227!3d13.034049090814936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDAyJzAyLjYiTiA3N8KwMzgnMzcuMSJF!5e0!3m2!1sen!2sin!4v1564230412648!5m2!1sen!2sin" 
+            width="400" 
+            height="300" 
+            frameborder="0"></iframe>
             </div>
         </div>
       </div>
