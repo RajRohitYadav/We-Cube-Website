@@ -29,6 +29,16 @@ class App extends React.Component {
         backgroundSize:'cover'
       }}/> */}
 
+      {/* Background Video */}
+      <video autoplay muted loop style={{position: 'fixed',
+        width: '100%',
+        height: '100%',
+        top: '0',
+        margin: 'auto'
+      }}>
+        <source src="https://drive.google.com/uc?export=download&id=15lftezf7arsPfN_8QlxCDrfgJuMUchrQ" type="video/mp4"/>
+      </video>
+
       {/* Navbar */}
       <div id='header'>
         <img src={webcube_logo} height="60" width="150" style={{position: 'fixed',left:'10px',top:'10px'}}/>
