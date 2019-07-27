@@ -4,11 +4,11 @@
   "private": true,
   "dependencies": {
     "@fullpage/react-fullpage": "^0.1.15",
+    "compression": "^1.7.4",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-fullpage": "^0.1.19",
-    "react-scripts": "3.0.1",
-    "reactjs-popup": "^1.4.1"
+    "react-scripts": "3.0.1"
   },
   "scripts": {
     "start": "react-scripts start",

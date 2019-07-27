@@ -21,6 +21,9 @@
 
 body{
   font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #000;
 }
 
 #header, #footer{
@@ -29,7 +32,7 @@ body{
   display:block;
   width: 100%;
   /* background: transparent; */
-  z-index:9;
+  z-index:98;
   /* color: #f2f2f2; */
   /* padding: 0px 0 0 0; */
   /* overflow: hidden; */
@@ -43,11 +46,6 @@ body{
 #footer{
   bottom:0;
 }
-/* .header{
-  margin-left: 18%;
-  position: absolute;
-  margin-top:-120px;
-} */
 
 /*menu icon*/
 .menu.icon {
@@ -80,50 +78,17 @@ body{
   background-color: currentColor;
 } 
 
-.line{
-  width: 15%;
-  /* height: 0px;
-  margin-left: 5px; */
-  border-top: 1px solid white;
-  /* top:33%; */
-  position: absolute;
-  /* margin-top:90px; */
-  left: 10;
-  top:25%;
-}
-
-.heading{
-  margin-left: 18%;
-  position: absolute;
-  /* top:40%; */
-  color: white;
-  width:60%;
-  font-size: calc(20px + 2vmin);
-  font-weight: 800;
-  top:18%;
-}
-
-.para{
-  margin-left: 18%;
-  position: relative;
-  /* top:40%; */
-  color: white;
-  width:50%;
-  top:30%;
-}
-
 /*Social media*/
 
 .fa {
   padding: 2px;
   font-size: 15px;
-  width: 15px;
+  width: 18px;
   text-align: center;
   text-decoration: none;
-  /* margin: 5px 2px; */
   background: #fff;
   color: black;
-  height: 15px;
+  height: 18px;
 }
 .fa:hover {
   opacity: 0.7;
@@ -133,12 +98,12 @@ body{
   position: absolute;
   right:110px;
 }
-.fa-twitter {
+.fa-linkedin {
   border-radius: 15%;
   position: absolute;
   right:80px;
 }
-.fa-dribbble {
+.fa-pinterest {
   border-radius: 50%;
   position: absolute;
   right:50px;
@@ -148,6 +113,8 @@ body{
   position: absolute;
   right:20px;
 }
+
+/* Popup Menu */
 .popup {
   color: white;
   z-index: 99;
@@ -159,7 +126,7 @@ body{
   right: 0;
   bottom: 0;
   margin: auto;
-  background-color: rgba(0,0,0, 0.5);
+  background-color: rgba(0,0,0, 0.6);
 }
 .popup_inner {
   position: absolute;
@@ -170,7 +137,7 @@ body{
   margin: auto;
   background: black;
   border: 1px solid white;
-  height: 200px;
+  height: 300px;
   min-height: 150px;
 }
 
@@ -189,4 +156,102 @@ body{
   padding-bottom:2%;
   font-weight: 800;
   font-size: 16px;
+}
+
+/* Page Content */
+.line{
+  width: 15%;
+  border-top: 1px solid white;
+  position: absolute;
+  left: 10;
+  top:25%;
+}
+
+.heading{
+  margin-left: 18%;
+  position: absolute;
+  color: white;
+  width:60%;
+  font-size: calc(20px + 2vmin);
+  font-weight: 800;
+  top:18%;
+}
+
+.para{
+  margin-left: 18%;
+  position: relative;
+  color: white;
+  width:50%;
+  top:30%;
+}
+
+.page{
+  min-height:100vh;
+  background-color:black;
+  display:block;
+}
+
+.page-content-box{
+  position:absolute;
+  margin-top:calc(1px + 20vmin);
+  width:90%;
+  padding:5px;
+}
+
+.big-line{
+  border-top: 1px solid white;
+  width:15%;
+  display: inline-block;
+  height:15px;
+}
+.small-line{
+  border-top: 1px solid white;
+  width:5%;
+  display: inline-block;
+  height:15px;
+  margin-left: 10%;
+}
+.title{
+  display: inline-block;
+  font-size: calc(20px + 2vmin);
+  font-weight: 600;
+  color:white;
+  margin-left:30px;
+}
+.data{
+  color:white;
+  width:60%;
+  margin-left:calc(15% + 30px);
+  margin-top:0px;
+  font-size:calc(8px + 1vmin);
+  display: inline-block;
+}
+.contact-map{
+  position: absolute;
+  margin-left: calc(55% + 30px);
+  top:0;
+  margin-top: 15px;
+}
+.place-card, .place-card-large{
+  display: none;
+}
+.services-data{
+  color:white;
+  width:80%;
+  margin-left:calc(15% + 30px);
+  margin-top:10px;
+  font-size:calc(8px + 1vmin);
+  /* display: inline-block; */
+  /* background-color: red; */
+  padding: 10px;
+}
+.services-data-box{
+  margin-left: 20px;
+}
+.services-data-title{
+  text-transform: capitalize
+}
+
+p{
+  color: #8f8f8f;
 }
