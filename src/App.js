@@ -1,6 +1,9 @@
 import React from 'react';
 import './App.css';
 import webcube_logo from './wecube_logo.jpg';
+import {Modal, Button} from 'react-bootstrap';
+import wecube_video from './wecube_video.mp4';
+
 
 class App extends React.Component {
   constructor(props){
@@ -21,6 +24,37 @@ class App extends React.Component {
   return (
     <div>
 
+      <Modal show={this.state.showMenu} onHide={()=>this.showMenu(false)} centered>
+        <Modal.Body style={{backgroundColor:'rgba(0,0,0,0.9)'}}>
+
+          <div className='popup_section_button'>
+            <a href="#about" style={{color:'white',textDecoration:'none',cursor: 'pointer'}}
+            onClick={()=>{this.showMenu(false)}}>
+              About Us
+            </a>
+          </div>
+
+          <div className='popup_section_button'>
+            <a href="#services" style={{color:'white',textDecoration:'none',cursor: 'pointer'}}
+            onClick={()=>{this.showMenu(false)}}>
+              Our Service
+            </a>
+          </div>
+
+          <div className='popup_section_button'>
+            <a href="#contact" style={{color:'white',textDecoration:'none',cursor: 'pointer'}}
+            onClick={()=>{this.showMenu(false)}}>
+              Contact
+            </a>
+          </div>
+
+        </Modal.Body>
+        {/* <Modal.Footer>
+          <Button variant="secondary" onClick={()=>this.showMenu(false)}>
+            Close
+          </Button>
+        </Modal.Footer> */}
+      </Modal>
       {/* Background Image */}
       {/* <div style={{
         backgroundImage: 'url(https://images.pexels.com/photos/1402787/pexels-photo-1402787.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260)',position: 'fixed',
@@ -41,7 +75,7 @@ class App extends React.Component {
         top: '0',
         margin: 'auto'
       }}>
-        <source src="https://drive.google.com/uc?export=download&id=1-7vfQZNktP_k_pe0pt3wG7W1HY1v7Eka" type="video/mp4"/>
+        <source src={wecube_video} type="video/mp4"/>
       </video>
 
       {/* Navbar */}
@@ -53,7 +87,7 @@ class App extends React.Component {
       </div>
 
       {/* POPUP */}
-      {this.state.showMenu&&
+      {/* {this.state.showMenu&&
         <div className='popup'>
           <div className='popup_inner'>
 
@@ -85,7 +119,7 @@ class App extends React.Component {
             </div>
           </div>
         </div>
-      }
+      } */}
 
       {/* Page 1 */}
       <div id='about' className='page'>
@@ -94,32 +128,27 @@ class App extends React.Component {
             <div className='big-line'></div>
             <div className='title'>About Us</div>
             <div className='data'>
-              <br/>
               <p>
-              Wecube is a one stop shop for any business development.
-              Wecube is a very well equipped website which will please you with some unique features. It is also a
-              community which serves its clients with the best sources available.
+              We cube is one stop shop for any Vision which through our services can be brought into reality. We cube is a very well equipped company which will provide you some unique features it is also a company which serves its clients with the best of the sources available.
               </p>
             </div>
 
-            <br/><br/><br/>
+            <br/><br/>
 
             <div className='small-line'></div>
             <div className='title'>Vision</div>
             <div className='data'>
-              <br/>
               <p>
               Our main aim is to build a tremendous network which holds almost every brand and to become a massive source for the corporate world.
               </p>
             </div>
             
-            <br/><br/><br/>
+            <br/><br/>
 
             <div className='d-none d-sm-block'>
               <div className='small-line'></div>
               <div className='title'>Mission</div>
               <div className='data'>
-                <br/>
                 <p>
                   To help the start-up companies, maintain a good position in the market also to be a well known and reputable company.
                 </p>
@@ -138,18 +167,14 @@ class App extends React.Component {
           <div className='services-data row'>
 
             <div className='col-md-3'>
-              <h6>BRANDING</h6>
-              <p>Logo design, Brand manual, Brand Guidelines</p>
+              <h6>UI/UX & DEVELOPMENT</h6>
+              <p>Web design, e-commerce website, App Design, E-Mailer, Development (Wordpress, Html ,css, java script, PHP, jQuery, MySQL )
+              </p>
             </div>
-
-            <div className='services-data-title col-md-3'>
-              <h6>PRINT AND MEDIA</h6>
-              <p>brochure, poster, Flyers, Hoardings </p>
-            </div>
-
+            
             <div className='col-md-3'>
-              <h6>DIGITAL MARKETING</h6>
-              <p>SEO & SMM, Email / SMS</p>
+              <h6>MAINTENANCE</h6>
+              <p>Website Creating & Hosting, Web Security, Data Storage & Management, Data Backup & Malware Removal, Ssl Crft</p>
             </div>
 
             <div className='col-md-3'>
@@ -162,16 +187,19 @@ class App extends React.Component {
           {/* Page 2 Section 2 */}
           <div className='services-data row d-none d-md-flex' style={{marginTop:'20vim'}}>
             <div className='col-md-3'>
-              <h6>UI/UX & DEVELOPMENT</h6>
-              <p>Web design, e-commerce website, App Design, E-Mailer, Development (Wordpress, Html ,css, java script, PHP, jQuery, MySQL )
-              </p>
-            </div>
-            
-            <div className='col-md-3'>
-              <h6>MAINTENANCE</h6>
-              <p>Website Creating & Hosting, Web Security, Data Storage & Management, Data Backup & Malware Removal, Ssl Crft</p>
+              <h6>BRANDING</h6>
+              <p>Logo design, Brand manual, Brand Guidelines</p>
             </div>
 
+            <div className='col-md-3'>
+              <h6>PRINT AND MEDIA</h6>
+              <p>brochure, poster, Flyers, Hoardings </p>
+            </div>
+
+            <div className='col-md-3'>
+              <h6>DIGITAL MARKETING</h6>
+              <p>SEO & SMM, Email / SMS</p>
+            </div>
           </div>
 
         </div>
